@@ -589,3 +589,6 @@ cython_debug/
 
 ### 61C Lab ###
 !/*/tests/reference-output/*.out
+
+
+**/.vscode/
