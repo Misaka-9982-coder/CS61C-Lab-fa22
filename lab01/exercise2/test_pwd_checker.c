@@ -5,6 +5,15 @@
 int main() {
     printf("Running tests...\n\n");
 
+    const char *test0_length_1 = "012345";
+    const char *test0_length_2 = "0123456789";
+    bool test0_length1 = check_length(test0_length_1);
+    bool test0_length2 = check_length(test0_length_2);
+    assert(test0_length1 == false);
+    assert(test0_length2 == true);
+
+    printf("Check_length test passed!\n\n");
+
     const char *test0_lower_1 = "AAAA";
     const char *test0_lower_2 = "absAA";
     bool test0_lower1 = check_lower(test0_lower_1);
