@@ -32,6 +32,17 @@ int main() {
 
     printf("Check_number test passed!\n\n");
 
+    const char *test0_first_name_1 = "cc";
+    const char *test0_last_name_1 = "bb";
+    const char *test0_password_1 = "ccbb";
+    const char *test0_password_2 = "aadd";
+    bool test0_name_1 = check_name(test0_first_name_1, test0_last_name_1, test0_password_1);
+    bool test0_name_2 = check_name(test0_first_name_1, test0_last_name_1, test0_password_2);
+    assert(test0_name_1 == false);
+    assert(test0_name_2 == true);
+
+    printf("Check_name test passed!\n\n");
+
 
     const char *test1_first = "Abraham";
     const char *test1_last = "Garcia";
