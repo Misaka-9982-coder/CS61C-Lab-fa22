@@ -39,23 +39,23 @@ void compute_nucleotide_occurrences(DNA_sequence *dna_seq) {
         return;
     }
 
-    int cnt_A = 0;
-    int cnt_C = 0;
-    int cnt_G = 0;
-    int cnt_T = 0;
+    int cnt_A = num_occurrences(dna_seq->sequence, 'A');
+    int cnt_C = num_occurrences(dna_seq->sequence, 'C');
+    int cnt_G = num_occurrences(dna_seq->sequence, 'G');
+    int cnt_T = num_occurrences(dna_seq->sequence, 'T');
 
-    for (int i = 0; i < strlen(dna_seq->sequence); i ++ ) {
-        char cur_letter = dna_seq->sequence[i];
-        if (cur_letter == 'A') {
-            cnt_A ++ ;
-        } else if (cur_letter == 'C') {
-            cnt_C ++ ;
-        } else if (cur_letter == 'G') {
-            cnt_G ++ ;
-        } else if (cur_letter == 'T') {
-            cnt_T ++ ;
-        }
-    }
+    // for (int i = 0; i < strlen(dna_seq->sequence); i ++ ) {
+    //     char cur_letter = dna_seq->sequence[i];
+    //     if (cur_letter == 'A') {
+    //         cnt_A ++ ;
+    //     } else if (cur_letter == 'C') {
+    //         cnt_C ++ ;
+    //     } else if (cur_letter == 'G') {
+    //         cnt_G ++ ;
+    //     } else if (cur_letter == 'T') {
+    //         cnt_T ++ ;
+    //     }
+    // }
 
     dna_seq -> A_count = cnt_A;
     dna_seq -> C_count = cnt_C;
