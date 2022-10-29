@@ -35,5 +35,32 @@ Each sequence will end with a NULL terminator and will have up to 20 nucleotides
 All letters will be upper case. */
 void compute_nucleotide_occurrences(DNA_sequence *dna_seq) {
     /* TODO: implement compute_nucleotide_occurrences */
+    if(dna_seq == NULL) {
+        return;
+    }
+
+    int cnt_A = 0;
+    int cnt_C = 0;
+    int cnt_G = 0;
+    int cnt_T = 0;
+
+    for (int i = 0; i < strlen(dna_seq->sequence); i ++ ) {
+        char cur_letter = dna_seq->sequence[i];
+        if (cur_letter == 'A') {
+            cnt_A ++ ;
+        } else if (cur_letter == 'C') {
+            cnt_C ++ ;
+        } else if (cur_letter == 'G') {
+            cnt_G ++ ;
+        } else if (cur_letter == 'T') {
+            cnt_T ++ ;
+        }
+    }
+
+    dna_seq -> A_count = cnt_A;
+    dna_seq -> C_count = cnt_C;
+    dna_seq -> G_count = cnt_G;
+    dna_seq -> T_count = cnt_T;
+
     return;
 }
