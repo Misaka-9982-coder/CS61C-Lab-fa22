@@ -23,6 +23,15 @@ int main() {
 
     printf("Check_upper test passed!\n\n");
 
+    const char *test0_number_1 = "aaaa";
+    const char *test0_number_2 = "12AaaA";
+    bool test0_number1 = check_number(test0_number_1);
+    assert(test0_number1 == false);
+    bool test0_number2 = check_number(test0_number_2);
+    assert(test0_number2 == true);
+
+    printf("Check_number test passed!\n\n");
+
 
     const char *test1_first = "Abraham";
     const char *test1_last = "Garcia";
