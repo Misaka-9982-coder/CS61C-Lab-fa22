@@ -5,6 +5,16 @@
 int main() {
     printf("Running tests...\n\n");
 
+    const char *test0_lower_1 = "AAAA";
+    const char *test0_lower_2 = "absAA";
+    bool test0_lower1 = check_lower(test0_lower_1);
+    assert(test0_lower1 == false);
+    bool test0_lower2 = check_lower(test0_lower_2);
+    assert(test0_lower2 == true);
+
+    printf("Check_lower test passed!\n\n");
+
+
     const char *test1_first = "Abraham";
     const char *test1_last = "Garcia";
     const char *test1_pwd = "qrtv?,mp!ltrA0b13rab4ham";
