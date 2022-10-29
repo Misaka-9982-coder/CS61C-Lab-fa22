@@ -5,5 +5,5 @@
 
 bool check_password(const char *first_name, const char *last_name, const char *password);
 bool check_lower(const char *password);
-
+bool check_upper(const char *password);
 #endif // PWD_CHECKER_H

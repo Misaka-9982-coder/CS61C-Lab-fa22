@@ -14,6 +14,15 @@ int main() {
 
     printf("Check_lower test passed!\n\n");
 
+    const char *test0_upper_1 = "aaaa";
+    const char *test0_upper_2 = "AaaA";
+    bool test0_upper1 = check_upper(test0_upper_1);
+    assert(test0_upper_1 == false);
+    bool test0_upper2 = check_upper(test0_upper_2);
+    assert(test0_upper2);
+
+    printf("Check_upper test passed!\n\n");
+
 
     const char *test1_first = "Abraham";
     const char *test1_last = "Garcia";
