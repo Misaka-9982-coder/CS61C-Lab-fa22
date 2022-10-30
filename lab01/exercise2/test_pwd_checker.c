@@ -5,54 +5,6 @@
 int main() {
     printf("Running tests...\n\n");
 
-    const char *test0_length_1 = "012345";
-    const char *test0_length_2 = "0123456789";
-    bool test0_length1 = check_length(test0_length_1);
-    bool test0_length2 = check_length(test0_length_2);
-    assert(test0_length1 == false);
-    assert(test0_length2 == true);
-
-    printf("Check_length test passed!\n\n");
-
-    const char *test0_lower_1 = "AAAA";
-    const char *test0_lower_2 = "absAA";
-    bool test0_lower1 = check_lower(test0_lower_1);
-    assert(test0_lower1 == false);
-    bool test0_lower2 = check_lower(test0_lower_2);
-    assert(test0_lower2 == true);
-
-    printf("Check_lower test passed!\n\n");
-
-    const char *test0_upper_1 = "aaaa";
-    const char *test0_upper_2 = "AaaA";
-    bool test0_upper1 = check_upper(test0_upper_1);
-    assert(test0_upper1 == false);
-    bool test0_upper2 = check_upper(test0_upper_2);
-    assert(test0_upper2 == true);
-
-    printf("Check_upper test passed!\n\n");
-
-    const char *test0_number_1 = "aaaa";
-    const char *test0_number_2 = "12AaaA";
-    bool test0_number1 = check_number(test0_number_1);
-    assert(test0_number1 == false);
-    bool test0_number2 = check_number(test0_number_2);
-    assert(test0_number2 == true);
-
-    printf("Check_number test passed!\n\n");
-
-    const char *test0_first_name_1 = "cc";
-    const char *test0_last_name_1 = "bb";
-    const char *test0_password_1 = "ccbb";
-    const char *test0_password_2 = "aadd";
-    bool test0_name_1 = check_name(test0_first_name_1, test0_last_name_1, test0_password_1);
-    bool test0_name_2 = check_name(test0_first_name_1, test0_last_name_1, test0_password_2);
-    assert(test0_name_1 == false);
-    assert(test0_name_2 == true);
-
-    printf("Check_name test passed!\n\n");
-
-
     const char *test1_first = "Abraham";
     const char *test1_last = "Garcia";
     const char *test1_pwd = "qrtv?,mp!ltrA0b13rab4ham";
