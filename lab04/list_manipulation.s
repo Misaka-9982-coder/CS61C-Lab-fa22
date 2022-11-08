@@ -178,7 +178,7 @@ printLoop:
     li a0, 11  # prepare for print string ecall
     ecall
     addi t1, t1, 1
-  li t6 5
+    li t6 5
     bne t1, t6, printLoop # ... while i!= 5
     li a1, '\n'
     li a0, 11
