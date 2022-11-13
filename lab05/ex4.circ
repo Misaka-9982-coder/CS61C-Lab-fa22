@@ -115,15 +115,15 @@
       <a name="appearance" val="classic"/>
       <a name="radix" val="16"/>
     </comp>
+    <comp lib="0" loc="(500,120)" name="Probe">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+    </comp>
     <comp lib="0" loc="(500,210)" name="Probe">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
     </comp>
     <comp lib="0" loc="(500,300)" name="Probe">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(500,90)" name="Probe">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
     </comp>
@@ -232,14 +232,15 @@
     <wire from="(450,270)" to="(480,270)"/>
     <wire from="(450,360)" to="(600,360)"/>
     <wire from="(460,90)" to="(480,90)"/>
+    <wire from="(480,120)" to="(480,150)"/>
+    <wire from="(480,120)" to="(500,120)"/>
     <wire from="(480,180)" to="(480,210)"/>
     <wire from="(480,210)" to="(480,240)"/>
     <wire from="(480,210)" to="(500,210)"/>
     <wire from="(480,270)" to="(480,300)"/>
     <wire from="(480,300)" to="(480,330)"/>
     <wire from="(480,300)" to="(500,300)"/>
-    <wire from="(480,90)" to="(480,150)"/>
-    <wire from="(480,90)" to="(500,90)"/>
+    <wire from="(480,90)" to="(480,120)"/>
     <wire from="(600,80)" to="(600,360)"/>
     <wire from="(600,80)" to="(900,80)"/>
   </circuit>
