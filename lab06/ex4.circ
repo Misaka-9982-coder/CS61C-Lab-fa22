@@ -96,6 +96,18 @@
       <a name="locked" val="true"/>
       <a name="width" val="8"/>
     </comp>
+    <comp lib="0" loc="(280,50)" name="Probe">
+      <a name="appearance" val="classic"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(410,50)" name="Probe">
+      <a name="appearance" val="classic"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(520,50)" name="Probe">
+      <a name="appearance" val="classic"/>
+      <a name="radix" val="16"/>
+    </comp>
     <comp lib="0" loc="(810,130)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -119,18 +131,27 @@
     <wire from="(200,130)" to="(200,150)"/>
     <wire from="(200,130)" to="(230,130)"/>
     <wire from="(200,90)" to="(200,110)"/>
-    <wire from="(270,120)" to="(320,120)"/>
+    <wire from="(270,120)" to="(300,120)"/>
     <wire from="(280,160)" to="(280,210)"/>
     <wire from="(280,160)" to="(320,160)"/>
     <wire from="(280,210)" to="(510,210)"/>
+    <wire from="(280,50)" to="(300,50)"/>
+    <wire from="(300,120)" to="(320,120)"/>
+    <wire from="(300,50)" to="(300,120)"/>
     <wire from="(320,120)" to="(330,120)"/>
-    <wire from="(380,120)" to="(460,120)"/>
+    <wire from="(380,120)" to="(430,120)"/>
+    <wire from="(410,50)" to="(430,50)"/>
+    <wire from="(430,120)" to="(460,120)"/>
+    <wire from="(430,50)" to="(430,120)"/>
     <wire from="(440,140)" to="(440,230)"/>
     <wire from="(440,140)" to="(460,140)"/>
     <wire from="(440,230)" to="(670,230)"/>
-    <wire from="(500,130)" to="(550,130)"/>
+    <wire from="(500,130)" to="(540,130)"/>
     <wire from="(510,170)" to="(510,210)"/>
     <wire from="(510,170)" to="(550,170)"/>
+    <wire from="(520,50)" to="(540,50)"/>
+    <wire from="(540,130)" to="(550,130)"/>
+    <wire from="(540,50)" to="(540,130)"/>
     <wire from="(610,130)" to="(670,130)"/>
     <wire from="(670,130)" to="(670,230)"/>
     <wire from="(670,130)" to="(810,130)"/>
