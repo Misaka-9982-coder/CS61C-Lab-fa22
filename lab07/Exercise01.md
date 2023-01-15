@@ -291,3 +291,220 @@ Byte Address: 96 = 0b 0000 0000 0000 0000 0000 0000 0110 0000
     </tr>
   </tbody>
 </table>
+
+## Scenario 2
+
+**Program Parameters**:
+
+- **Array Size**: 64 ints
+- **Step Size**: 2
+- **Rep Count**: 1
+- **Option**: 1
+
+**Cache Parameters**:
+
+- **Cache Levels**: 1
+- **Block Size**: 16 bytes
+- **Number of Blocks**: 16
+- **Associativity**: 2
+- **Block Replacement Policy**: LRU
+
+
+
+<table>
+  <thead>
+    <tr>
+    	<th colspan="7">Way 0</th>
+    </tr>
+    <tr>
+      <th>Set #</th>
+      <th>Valid</th>
+      <th>Tag</th>
+      <th colspan="4">Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="3"></td>
+      <td>Bytes 15-12</td>
+      <td>Bytes 11-8</td>
+      <td>Bytes 7-4</td>
+      <td>Bytes 3-0</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+    	<th colspan="7">Way 1</th>
+    </tr>
+    <tr>
+      <th>Set #</th>
+      <th>Valid</th>
+      <th>Tag</th>
+      <th colspan="4">Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="3"></td>
+      <td>Bytes 15-12</td>
+      <td>Bytes 11-8</td>
+      <td>Bytes 7-4</td>
+      <td>Bytes 3-0</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Compute the Byte Addresses
+
+- offset bits = log2(block size) = log2(16) = 4
+
+- \#index bits = log2(num indicies) = log2(8) = 3
+
+- \#tag bits = # address bits - # index bits - # offset bits = 32 - 4 - 3 = 25
