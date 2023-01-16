@@ -1,4 +1,4 @@
-# Exercise 1 - Cache Practice Problems
+## Exercise 1 - Cache Practice Problems
 
 ```c
 /* Assume that each value in array is initalized to 5
@@ -28,7 +28,7 @@ int main() {
 }
 ```
 
-## Scenario 1
+### Scenario 1
 
 **Program Parameters**:
 
@@ -96,7 +96,7 @@ The layout of the cache can be seen here:
 
 - \#tag bits = # address bits - # index bits - # offset bits = 32 - 3 - 2 = 27
 
-### Access Element 0
+#### Access Element 0
 
 Byte Address: 0b 0000 0000 0000 0000 0000 0000 0000 0000
 
@@ -145,7 +145,7 @@ Byte Address: 0b 0000 0000 0000 0000 0000 0000 0000 0000
   </tbody>
 </table>
 
-### Access Element 8
+#### Access Element 8
 
 Byte Address: 32 = 0b 0000 0000 0000 0000 0000 0000 0010 0000
 
@@ -194,7 +194,7 @@ Byte Address: 32 = 0b 0000 0000 0000 0000 0000 0000 0010 0000
   </tbody>
 </table>
 
-### Access Element 16
+#### Access Element 16
 
 Byte Address: 64 = 0b 0000 0000 0000 0000 0000 0000 0100 0000
 
@@ -243,7 +243,7 @@ Byte Address: 64 = 0b 0000 0000 0000 0000 0000 0000 0100 0000
   </tbody>
 </table>
 
-### Access Element 24
+#### Access Element 24
 
 Byte Address: 96 = 0b 0000 0000 0000 0000 0000 0000 0110 0000
 
@@ -292,7 +292,7 @@ Byte Address: 96 = 0b 0000 0000 0000 0000 0000 0000 0110 0000
   </tbody>
 </table>
 
-## Scenario 2
+### Scenario 2
 
 **Program Parameters**:
 
@@ -434,3 +434,53 @@ Byte Address: 96 = 0b 0000 0000 0000 0000 0000 0000 0110 0000
 |      26      | 0b 0000 0000 0000 0000 0000 0001 1 | 0b010 | 0b0000 |
 |      28      | 0b 0000 0000 0000 0000 0000 0001 1 | 0b100 | 0b0000 |
 |      30      | 0b 0000 0000 0000 0000 0000 0001 1 | 0b110 | 0b0000 |
+
+## Exercise 2 - Loop Ordering and Matrix Multiplication
+
+- ijk
+
+Step size across A: n
+
+Step size across B: 1
+
+Step size across C: 0
+
+- ikj
+
+Step size across A: 0
+
+Step size across B: n
+
+Step size across C: n
+
+- jik
+
+Step size across A: n
+
+Step size across B: 1
+
+Step size across C: 0
+
+- jki
+
+Step size across A: 1
+
+Step size across B: 0
+
+Step size across C: 1
+
+- kij
+
+Step size across A: 0
+
+Step size across B: n
+
+Step size across C: n
+
+- kji
+
+Step size across A: 1
+
+Step size across B: 0
+
+Step size across C: 1
