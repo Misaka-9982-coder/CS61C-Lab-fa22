@@ -37,11 +37,7 @@ double benchmark(int *A, int *B, int n, int blocksize,
     return seconds*1e3;
 }
 
-int main( int argc, char **argv ) {
-
-    int n = 12000;
-    int blocksize = 80;
-
+void test_transpose( int n, int blocksize ) {
     /* allocate an n*n block of integers for the matrices */
     int *A = (int*)malloc( n*n*sizeof(int) );
     int *B = (int*)malloc( n*n*sizeof(int) );
@@ -59,8 +55,39 @@ int main( int argc, char **argv ) {
     printf("student: %g milliseconds\n", time2);
     if ((time1 - time2) < 250) {
         printf("insufficient speedup\n");
-        return -1;
+        // exit( -1 );
+        return;
     }
     printf("Speedup sufficient\n");
+}
+
+int main( int argc, char **argv ) {
+
+    int n = 12000;
+    int blocksize = 80;
+
+    printf("\n======== The default setting ========\n\n");
+
+    test_transpose(n, blocksize);
+
+    int n1[] =         {12000, 100, 1000, 2000, 5000, 10000};
+    int blocksize1[] = {   80,  20,   20,   20,   20,    20};
+
+    printf("\n======== The Part 1  setting ========\n\n");
+
+    for(int i = 0; i < sizeof(n1) / sizeof(int); i ++ ) {
+        test_transpose(n1[i], blocksize1[i]);
+    }
+
+
+    int n2[] =         {10000, 10000, 10000, 10000, 10000};
+    int blocksize2[] = {   50,   100,   500,  1000,  5000};
+
+    printf("\n======== The Part 2  setting ========\n\n");
+
+    for(int i = 0; i < sizeof(n2) / sizeof(int); i ++ ) {
+        test_transpose(n2[i], blocksize2[i]);
+    }
+
     return 0;
 }
